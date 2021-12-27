@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(133 247 101);
+    
+}
+.buttons{
+    background-color: #ffefab;
+    height: 400px;
+    width: 700px;
+    border-radius: 7px;
+    
+}
+.buttons-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.buttons button{
+    height: 40px;
+}
