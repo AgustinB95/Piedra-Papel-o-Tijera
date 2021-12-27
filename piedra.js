@@ -15,7 +15,6 @@ function numeroCompu(){
                 break;
         }
 }
-
 function clickPiedra(){
     boton = document.getElementById("piedra");
     jugador = boton.id
