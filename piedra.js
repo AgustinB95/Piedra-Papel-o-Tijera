@@ -18,19 +18,19 @@ function numeroCompu(){
 
 function resultadoEmpate(resultado){
     console.log("La computadora elige " + resultado + ": Es un empate");
-    document.getElementById("resultado").innerHTML = "La computadora elige " + resultado + ": Es un empate";
+    document.getElementById("resultado").innerHTML = "LA COMPUTADORA ELIGE " + resultado.toUpperCase() + ": EMPATE";
     document.getElementById('background').style.backgroundColor = "rgb(142,142,231)";
 }
 
 function resultadoDerrota(resultado){
     console.log("La computadora elige " + resultado + ": Perdiste =(");
-    document.getElementById("resultado").innerHTML = "La computadora elige " + resultado + ": Perdiste =(";
+    document.getElementById("resultado").innerHTML = "LA COMPUTADORA ELIGE " + resultado.toUpperCase() + ": PERDISTE =(";
     document.getElementById('background').style.backgroundColor = "red";
 }
 
 function resultadoVictoria(resultado){
     console.log("La computadora elige " + resultado + ": Ganaste!!");
-    document.getElementById("resultado").innerHTML = "La computadora elige " + resultado + ": Ganaste!!";
+    document.getElementById("resultado").innerHTML = "LA COMPUTADORA ELIGE " + resultado.toUpperCase() + ": GANASTE!!";
     document.getElementById('background').style.backgroundColor = 'rgb(103, 255, 15)';
 }
 
@@ -83,6 +83,13 @@ function clickPiedra(){
     jugador = boton.id
     numeroCompu();
     comparacion();
+    document.getElementById('piedra').style.backgroundColor = "blue";
+    document.getElementById('piedra').style.color = "black"
+    document.getElementById('papel').style.backgroundColor = "black";
+    document.getElementById('papel').style.color = "white"
+    document.getElementById('tijera').style.backgroundColor = "black";
+    document.getElementById('tijera').style.color = "white"
+    
 }
 
 function clickPapel(){
@@ -90,6 +97,12 @@ function clickPapel(){
     jugador = boton.id;
     numeroCompu();
     comparacion();
+    document.getElementById('piedra').style.backgroundColor = "black";
+    document.getElementById('piedra').style.color = "white"
+    document.getElementById('papel').style.backgroundColor = "blue";
+    document.getElementById('papel').style.color = "black"
+    document.getElementById('tijera').style.backgroundColor = "black";
+    document.getElementById('tijera').style.color = "white"
 }
 
 function clickTijera(){
@@ -97,6 +110,12 @@ function clickTijera(){
     jugador = boton.id;
     numeroCompu();
     comparacion();
+    document.getElementById('piedra').style.backgroundColor = "black";
+    document.getElementById('piedra').style.color = "white"
+    document.getElementById('papel').style.backgroundColor = "black";
+    document.getElementById('papel').style.color = "white"
+    document.getElementById('tijera').style.backgroundColor = "blue";
+    document.getElementById('tijera').style.color = "black"
 }
 
 

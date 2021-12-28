@@ -12,16 +12,41 @@
     background-color: rgb(142, 142, 231);
 }
 .buttons{
-    background-color: #f7fa4d;
+    background-color: #ffffff;
     height: 400px;
     width: 700px;
-    border-radius: 7px;
+    border-radius: 10px;
 }
 .buttons-container{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    height: 40%;
+    align-items: center;
 }
-.buttons button{
-    height: 40px;
+
+.buttons-container button{
+    height: 60px;
+    width: 150px;
+    border-radius: 6px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+    font-family: 'Times New Roman', Times, serif;
+}
+.buttons-container button:hover{
+    color: rgb(243, 247, 26);
+}
+.mensaje{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mensaje h1{
+    width: auto;
+    height: 50px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
