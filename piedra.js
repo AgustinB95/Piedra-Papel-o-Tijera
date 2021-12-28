@@ -15,6 +15,69 @@ function numeroCompu(){
                 break;
         }
 }
+
+function resultadoEmpate(resultado){
+    console.log("La computadora elige " + resultado + ": Es un empate");
+    document.getElementById("resultado").innerHTML = "La computadora elige " + resultado + ": Es un empate";
+    document.getElementById('background').style.backgroundColor = "rgb(142,142,231)";
+}
+
+function resultadoDerrota(resultado){
+    console.log("La computadora elige " + resultado + ": Perdiste =(");
+    document.getElementById("resultado").innerHTML = "La computadora elige " + resultado + ": Perdiste =(";
+    document.getElementById('background').style.backgroundColor = "red";
+}
+
+function resultadoVictoria(resultado){
+    console.log("La computadora elige " + resultado + ": Ganaste!!");
+    document.getElementById("resultado").innerHTML = "La computadora elige " + resultado + ": Ganaste!!";
+    document.getElementById('background').style.backgroundColor = 'rgb(103, 255, 15)';
+}
+
+function comparacion(){
+    switch(jugador){
+    case "piedra":
+        switch (computadora){
+            case "piedra":
+                resultadoEmpate(computadora);
+                break;
+            case "papel":
+                resultadoDerrota(computadora);
+                break;
+            case "tijera":
+                resultadoVictoria(computadora);
+                break;
+        }
+    break;
+    case "papel":
+        switch (computadora){
+            case "piedra":
+                resultadoVictoria(computadora);
+                break;
+            case "papel":
+                resultadoEmpate(computadora);
+                break;
+            case "tijera":
+                resultadoDerrota(computadora);
+                break;
+        }
+    break;
+    case "tijera":
+        switch (computadora){
+            case "piedra":
+                resultadoDerrota(computadora);
+                break;
+            case "papel":
+                resultadoVictoria(computadora);
+                break;
+            case "tijera":
+                resultadoEmpate(computadora);
+                break;
+        }
+    break;
+    }
+}
+
 function clickPiedra(){
     boton = document.getElementById("piedra");
     jugador = boton.id
@@ -36,55 +99,5 @@ function clickTijera(){
     comparacion();
 }
 
-function comparacion(){
-    switch(jugador){
-    case "piedra":
-        switch (computadora){
-            case "piedra":
-                console.log("La computadora elige " + computadora + ": Es un empate");
-                document.getElementById("resultado").innerHTML = "La computadora elige " + computadora + ": Es un empate";
-                break;
-            case "papel":
-                console.log("La computadora elige " + computadora + ": Perdiste =(");
-                document.getElementById("resultado").innerHTML = "La computadora elige " + computadora + ": Perdiste =(";
-                break;
-            case "tijera":
-                console.log("La computadora elige " + computadora + ": Ganaste!!");
-                document.getElementById("resultado").innerHTML = "La computadora elige " + computadora + ": Ganaste!!";
-                break;
-        }
-    break;
-    case "papel":
-        switch (computadora){
-            case "piedra":
-                console.log("La computadora elige " + computadora + ": Ganaste!!");
-                document.getElementById("resultado").innerHTML = "La computadora elige " + computadora + ": Ganaste!!";
-                break;
-            case "papel":
-                console.log("La computadora elige " + computadora + ": Es un empate");
-                document.getElementById("resultado").innerHTML = "La computadora elige " + computadora + ": Es un empate";
-                break;
-            case "tijera":
-                console.log("La computadora elige " + computadora + ": Perdiste =(");
-                document.getElementById("resultado").innerHTML = "La computadora elige " + computadora + ": Perdiste =(";
-                break;
-        }
-    break;
-    case "tijera":
-        switch (computadora){
-            case "piedra":
-                console.log("La computadora elige " + computadora + ": Perdiste =(");
-                document.getElementById("resultado").innerHTML = "La computadora elige " + computadora + ": Perdiste =(";
-                break;
-            case "papel":
-                console.log("La computadora elige " + computadora + ": Ganaste!!");
-                document.getElementById("resultado").innerHTML = "La computadora elige " + computadora + ": Ganaste!!";
-                break;
-            case "tijera":
-                console.log("La computadora elige " + computadora + ": Es un empate");
-                document.getElementById("resultado").innerHTML = "La computadora elige " + computadora + ": Es un empate";
-                break;
-        }
-    break;
-    }
-}
+
+
